@@ -44,7 +44,7 @@ fun! promptline#slices#battery(...)
 endfun
 
 fun! promptline#slices#python_virtualenv(...)
-  return '${VIRTUAL_ENV##*/}'
+  return '${VIRTUAL_ENV:+(}${VIRTUAL_ENV##*/}${VIRTUAL_ENV:+)}'
 endfun
 
 fun! promptline#slices#git_status(...)
